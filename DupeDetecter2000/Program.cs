@@ -141,8 +141,7 @@ namespace DupeDetecter2000
 			{
 				using (var stream = File.OpenRead(filename))
 				{
-					var hash = md5.ComputeHash(stream);
-					return BitConverter.ToString(hash).Replace("-", "").ToLower();
+					return BitConverter.ToString(md5.ComputeHash(stream)).Replace("-", "").ToLower();
 				}
 			}
 		}
